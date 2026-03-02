@@ -14,14 +14,22 @@ This repository is an example of using the **[Universal Research and Scientific 
    pip install -r requirements.txt
    ```
 
-2. **Clone OpenFUSIONToolkit and URSA** (if not already present)
+2. **Create a `.env` file** in the repo root and add your OpenAI API key (required for URSA workflows that use an LLM):
+
+   ```bash
+   echo 'OPENAI_API_KEY=your-key-here' > .env
+   ```
+
+   Replace `your-key-here` with your key from [OpenAI API keys](https://platform.openai.com/account/api-keys). The `.env` file is gitignored.
+
+3. **Clone OpenFUSIONToolkit and URSA** (if not already present)
 
    ```bash
    git clone https://github.com/OpenFUSIONToolkit/OpenFUSIONToolkit.git
    git clone https://github.com/lanl/ursa.git
    ```
 
-3. **Install the OpenFUSIONToolkit binary** and set up your environment so the OFT tools and Python bindings are on your `PATH` and `PYTHONPATH`. For a typical macOS install under `/Applications/OpenFUSIONToolkit`:
+4. **Install the OpenFUSIONToolkit binary** and set up your environment so the OFT tools and Python bindings are on your `PATH` and `PYTHONPATH`. For a typical macOS install under `/Applications/OpenFUSIONToolkit`:
 
    ```bash
    echo 'export OFT_ROOTPATH="/Applications/OpenFUSIONToolkit"' >> ~/.zshrc
